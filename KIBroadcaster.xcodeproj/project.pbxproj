@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87E290221FA7DC9400D6559A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E290211FA7DC9400D6559A /* AppDelegate.m */; };
+		87E290251FA7DC9400D6559A /* KIBeaconTransmitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E290241FA7DC9400D6559A /* KIBeaconTransmitterViewController.m */; };
+		87E290281FA7DC9400D6559A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87E290261FA7DC9400D6559A /* Main.storyboard */; };
+		87E2902A1FA7DC9400D6559A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87E290291FA7DC9400D6559A /* Assets.xcassets */; };
+		87E2902D1FA7DC9400D6559A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87E2902B1FA7DC9400D6559A /* LaunchScreen.storyboard */; };
+		87E290301FA7DC9400D6559A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E2902F1FA7DC9400D6559A /* main.m */; };
+		87E2903A1FA7DC9400D6559A /* KIBroadcasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E290391FA7DC9400D6559A /* KIBroadcasterTests.m */; };
+		87E290451FA7DC9400D6559A /* KIBroadcasterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E290441FA7DC9400D6559A /* KIBroadcasterUITests.m */; };
+		87E290551FA7DD0800D6559A /* KIBeaconTransmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E290541FA7DD0800D6559A /* KIBeaconTransmitter.m */; };
+		87E290581FA7DD2E00D6559A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E290571FA7DD2800D6559A /* CoreBluetooth.framework */; };
+		87E2905A1FA7DD3900D6559A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E290591FA7DD3300D6559A /* CoreLocation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		87E290361FA7DC9400D6559A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87E290151FA7DC9400D6559A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87E2901C1FA7DC9400D6559A;
+			remoteInfo = KIBroadcaster;
+		};
+		87E290411FA7DC9400D6559A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87E290151FA7DC9400D6559A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87E2901C1FA7DC9400D6559A;
+			remoteInfo = KIBroadcaster;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		87E2901D1FA7DC9400D6559A /* KIBroadcaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KIBroadcaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87E290201FA7DC9400D6559A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		87E290211FA7DC9400D6559A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		87E290231FA7DC9400D6559A /* KIBeaconTransmitterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KIBeaconTransmitterViewController.h; sourceTree = "<group>"; };
+		87E290241FA7DC9400D6559A /* KIBeaconTransmitterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KIBeaconTransmitterViewController.m; sourceTree = "<group>"; };
+		87E290271FA7DC9400D6559A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87E290291FA7DC9400D6559A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87E2902C1FA7DC9400D6559A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		87E2902E1FA7DC9400D6559A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87E2902F1FA7DC9400D6559A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		87E290351FA7DC9400D6559A /* KIBroadcasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KIBroadcasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87E290391FA7DC9400D6559A /* KIBroadcasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KIBroadcasterTests.m; sourceTree = "<group>"; };
+		87E2903B1FA7DC9400D6559A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87E290401FA7DC9400D6559A /* KIBroadcasterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KIBroadcasterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87E290441FA7DC9400D6559A /* KIBroadcasterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KIBroadcasterUITests.m; sourceTree = "<group>"; };
+		87E290461FA7DC9400D6559A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87E290531FA7DD0800D6559A /* KIBeaconTransmitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KIBeaconTransmitter.h; sourceTree = "<group>"; };
+		87E290541FA7DD0800D6559A /* KIBeaconTransmitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KIBeaconTransmitter.m; sourceTree = "<group>"; };
+		87E290571FA7DD2800D6559A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		87E290591FA7DD3300D6559A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87E2901A1FA7DC9400D6559A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87E290321FA7DC9400D6559A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87E2903D1FA7DC9400D6559A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87E2905A1FA7DD3900D6559A /* CoreLocation.framework in Frameworks */,
+				87E290581FA7DD2E00D6559A /* CoreBluetooth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87E290141FA7DC9400D6559A = {
+			isa = PBXGroup;
+			children = (
+				87E2901F1FA7DC9400D6559A /* KIBroadcaster */,
+				87E290381FA7DC9400D6559A /* KIBroadcasterTests */,
+				87E290431FA7DC9400D6559A /* KIBroadcasterUITests */,
+				87E2901E1FA7DC9400D6559A /* Products */,
+				87E290561FA7DD2800D6559A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		87E2901E1FA7DC9400D6559A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87E2901D1FA7DC9400D6559A /* KIBroadcaster.app */,
+				87E290351FA7DC9400D6559A /* KIBroadcasterTests.xctest */,
+				87E290401FA7DC9400D6559A /* KIBroadcasterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87E2901F1FA7DC9400D6559A /* KIBroadcaster */ = {
+			isa = PBXGroup;
+			children = (
+				87E290521FA7DCF000D6559A /* Managers */,
+				87E290201FA7DC9400D6559A /* AppDelegate.h */,
+				87E290211FA7DC9400D6559A /* AppDelegate.m */,
+				87E290231FA7DC9400D6559A /* KIBeaconTransmitterViewController.h */,
+				87E290241FA7DC9400D6559A /* KIBeaconTransmitterViewController.m */,
+				87E290261FA7DC9400D6559A /* Main.storyboard */,
+				87E290291FA7DC9400D6559A /* Assets.xcassets */,
+				87E2902B1FA7DC9400D6559A /* LaunchScreen.storyboard */,
+				87E2902E1FA7DC9400D6559A /* Info.plist */,
+				87E2902F1FA7DC9400D6559A /* main.m */,
+			);
+			path = KIBroadcaster;
+			sourceTree = "<group>";
+		};
+		87E290381FA7DC9400D6559A /* KIBroadcasterTests */ = {
+			isa = PBXGroup;
+			children = (
+				87E290391FA7DC9400D6559A /* KIBroadcasterTests.m */,
+				87E2903B1FA7DC9400D6559A /* Info.plist */,
+			);
+			path = KIBroadcasterTests;
+			sourceTree = "<group>";
+		};
+		87E290431FA7DC9400D6559A /* KIBroadcasterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				87E290441FA7DC9400D6559A /* KIBroadcasterUITests.m */,
+				87E290461FA7DC9400D6559A /* Info.plist */,
+			);
+			path = KIBroadcasterUITests;
+			sourceTree = "<group>";
+		};
+		87E290521FA7DCF000D6559A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				87E290531FA7DD0800D6559A /* KIBeaconTransmitter.h */,
+				87E290541FA7DD0800D6559A /* KIBeaconTransmitter.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		87E290561FA7DD2800D6559A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87E290591FA7DD3300D6559A /* CoreLocation.framework */,
+				87E290571FA7DD2800D6559A /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87E2901C1FA7DC9400D6559A /* KIBroadcaster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87E290491FA7DC9400D6559A /* Build configuration list for PBXNativeTarget "KIBroadcaster" */;
+			buildPhases = (
+				87E290191FA7DC9400D6559A /* Sources */,
+				87E2901A1FA7DC9400D6559A /* Frameworks */,
+				87E2901B1FA7DC9400D6559A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KIBroadcaster;
+			productName = KIBroadcaster;
+			productReference = 87E2901D1FA7DC9400D6559A /* KIBroadcaster.app */;
+			productType = "com.apple.product-type.application";
+		};
+		87E290341FA7DC9400D6559A /* KIBroadcasterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87E2904C1FA7DC9400D6559A /* Build configuration list for PBXNativeTarget "KIBroadcasterTests" */;
+			buildPhases = (
+				87E290311FA7DC9400D6559A /* Sources */,
+				87E290321FA7DC9400D6559A /* Frameworks */,
+				87E290331FA7DC9400D6559A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87E290371FA7DC9400D6559A /* PBXTargetDependency */,
+			);
+			name = KIBroadcasterTests;
+			productName = KIBroadcasterTests;
+			productReference = 87E290351FA7DC9400D6559A /* KIBroadcasterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		87E2903F1FA7DC9400D6559A /* KIBroadcasterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87E2904F1FA7DC9400D6559A /* Build configuration list for PBXNativeTarget "KIBroadcasterUITests" */;
+			buildPhases = (
+				87E2903C1FA7DC9400D6559A /* Sources */,
+				87E2903D1FA7DC9400D6559A /* Frameworks */,
+				87E2903E1FA7DC9400D6559A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87E290421FA7DC9400D6559A /* PBXTargetDependency */,
+			);
+			name = KIBroadcasterUITests;
+			productName = KIBroadcasterUITests;
+			productReference = 87E290401FA7DC9400D6559A /* KIBroadcasterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87E290151FA7DC9400D6559A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Alexandru Frangeti";
+				TargetAttributes = {
+					87E2901C1FA7DC9400D6559A = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+					87E290341FA7DC9400D6559A = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 87E2901C1FA7DC9400D6559A;
+					};
+					87E2903F1FA7DC9400D6559A = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 87E2901C1FA7DC9400D6559A;
+					};
+				};
+			};
+			buildConfigurationList = 87E290181FA7DC9400D6559A /* Build configuration list for PBXProject "KIBroadcaster" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 87E290141FA7DC9400D6559A;
+			productRefGroup = 87E2901E1FA7DC9400D6559A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87E2901C1FA7DC9400D6559A /* KIBroadcaster */,
+				87E290341FA7DC9400D6559A /* KIBroadcasterTests */,
+				87E2903F1FA7DC9400D6559A /* KIBroadcasterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87E2901B1FA7DC9400D6559A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87E2902D1FA7DC9400D6559A /* LaunchScreen.storyboard in Resources */,
+				87E2902A1FA7DC9400D6559A /* Assets.xcassets in Resources */,
+				87E290281FA7DC9400D6559A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87E290331FA7DC9400D6559A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87E2903E1FA7DC9400D6559A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87E290191FA7DC9400D6559A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87E290251FA7DC9400D6559A /* KIBeaconTransmitterViewController.m in Sources */,
+				87E290551FA7DD0800D6559A /* KIBeaconTransmitter.m in Sources */,
+				87E290301FA7DC9400D6559A /* main.m in Sources */,
+				87E290221FA7DC9400D6559A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87E290311FA7DC9400D6559A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87E2903A1FA7DC9400D6559A /* KIBroadcasterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87E2903C1FA7DC9400D6559A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87E290451FA7DC9400D6559A /* KIBroadcasterUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		87E290371FA7DC9400D6559A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87E2901C1FA7DC9400D6559A /* KIBroadcaster */;
+			targetProxy = 87E290361FA7DC9400D6559A /* PBXContainerItemProxy */;
+		};
+		87E290421FA7DC9400D6559A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87E2901C1FA7DC9400D6559A /* KIBroadcaster */;
+			targetProxy = 87E290411FA7DC9400D6559A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		87E290261FA7DC9400D6559A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87E290271FA7DC9400D6559A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		87E2902B1FA7DC9400D6559A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87E2902C1FA7DC9400D6559A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		87E290471FA7DC9400D6559A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		87E290481FA7DC9400D6559A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87E2904A1FA7DC9400D6559A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VVJ878L63J;
+				INFOPLIST_FILE = KIBroadcaster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = info.frangeti.KIBroadcaster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87E2904B1FA7DC9400D6559A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VVJ878L63J;
+				INFOPLIST_FILE = KIBroadcaster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = info.frangeti.KIBroadcaster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		87E2904D1FA7DC9400D6559A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VVJ878L63J;
+				INFOPLIST_FILE = KIBroadcasterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = info.frangeti.KIBroadcasterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KIBroadcaster.app/KIBroadcaster";
+			};
+			name = Debug;
+		};
+		87E2904E1FA7DC9400D6559A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VVJ878L63J;
+				INFOPLIST_FILE = KIBroadcasterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = info.frangeti.KIBroadcasterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KIBroadcaster.app/KIBroadcaster";
+			};
+			name = Release;
+		};
+		87E290501FA7DC9400D6559A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VVJ878L63J;
+				INFOPLIST_FILE = KIBroadcasterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = info.frangeti.KIBroadcasterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KIBroadcaster;
+			};
+			name = Debug;
+		};
+		87E290511FA7DC9400D6559A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VVJ878L63J;
+				INFOPLIST_FILE = KIBroadcasterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = info.frangeti.KIBroadcasterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KIBroadcaster;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		87E290181FA7DC9400D6559A /* Build configuration list for PBXProject "KIBroadcaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87E290471FA7DC9400D6559A /* Debug */,
+				87E290481FA7DC9400D6559A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87E290491FA7DC9400D6559A /* Build configuration list for PBXNativeTarget "KIBroadcaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87E2904A1FA7DC9400D6559A /* Debug */,
+				87E2904B1FA7DC9400D6559A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87E2904C1FA7DC9400D6559A /* Build configuration list for PBXNativeTarget "KIBroadcasterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87E2904D1FA7DC9400D6559A /* Debug */,
+				87E2904E1FA7DC9400D6559A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87E2904F1FA7DC9400D6559A /* Build configuration list for PBXNativeTarget "KIBroadcasterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87E290501FA7DC9400D6559A /* Debug */,
+				87E290511FA7DC9400D6559A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 87E290151FA7DC9400D6559A /* Project object */;
+}
