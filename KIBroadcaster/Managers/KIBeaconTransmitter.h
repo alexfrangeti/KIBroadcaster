@@ -10,29 +10,29 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 #import <CoreLocation/CoreLocation.h>
 
-//BeaconTransmitterDelegate
-//Protocol. Ensures that the methods listed below are implemented
-//by the transmitter delegate object.
+// BeaconTransmitterDelegate
+// Protocol. Ensures that the methods listed below are implemented
+// by the transmitter delegate object.
 @protocol KIBeaconTransmitterDelegate <NSObject>
 @required
 
-//Called on state change, power on
--(void)didPowerOn;
+// Called on state change, power on
+- (void)didPowerOn;
 
-//Called on state change, power off
--(void)didPowerOff;
+// Called on state change, power off
+- (void)didPowerOff;
 
-//Called on any error that the manager signals
--(void)onError:(NSError *)error;
+// Called on any error that the manager signals
+- (void)onError:(NSError *)error;
 
 @end
 
 @interface KIBeaconTransmitter : NSObject<CBPeripheralManagerDelegate>
 
-//The manager's delegate object
+// The manager's delegate object
 @property (weak) id<KIBeaconTransmitterDelegate>broadcastDelegate;
 
-//The sole constructor
--(instancetype)initWithDelegate:(id<KIBeaconTransmitterDelegate>)delegate;
+// The sole constructor
+- (instancetype)initWithDelegate:(id<KIBeaconTransmitterDelegate>)delegate;
 
 @end

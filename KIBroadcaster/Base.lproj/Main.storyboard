@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -8,20 +8,105 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNextCondensed.ttc">
+            <string>AvenirNextCondensed-DemiBold</string>
+            <string>AvenirNextCondensed-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Beacon Transmitter View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="KIBeaconTransmitterViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5B-iU-gPK" userLabel="TopBackgroundView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <color key="backgroundColor" red="0.38431372549019605" green="0.51764705882352935" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="5pL-O1-JTi"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="KIBroadcaster" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDY-mi-X2x">
+                                <rect key="frame" x="27" y="48" width="134" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7m-Ai-voi" userLabel="BottomBackgroundView">
+                                <rect key="frame" x="0.0" y="762" width="375" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bluetooth status: -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fcc-wX-34W">
+                                        <rect key="frame" x="116.66666666666667" y="15.666666666666627" width="142.33333333333331" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Fcc-wX-34W" secondAttribute="bottom" constant="14" id="964-MW-cKF"/>
+                                    <constraint firstItem="Fcc-wX-34W" firstAttribute="centerX" secondItem="B7m-Ai-voi" secondAttribute="centerX" id="axz-4L-bR1"/>
+                                    <constraint firstAttribute="height" constant="50" id="dXG-7N-5T9"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mf-05-UJU" customClass="KIButton">
+                                <rect key="frame" x="102.66666666666669" y="576" width="170" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="KVw-jy-0XR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="17"/>
+                                <state key="normal" title="Start Broadcasting"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNT-5w-G8o">
+                                <rect key="frame" x="37" y="366.33333333333331" width="300" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="C0U-LP-jXH"/>
+                                    <constraint firstAttribute="height" constant="80" id="J3E-fO-MFn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56862745098039214" green="0.76470588235294112" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KNT-5w-G8o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Edm-Ht-umU"/>
+                            <constraint firstItem="1Mf-05-UJU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F73-nr-W0O"/>
+                            <constraint firstItem="KNT-5w-G8o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KEB-6c-Sme"/>
+                            <constraint firstItem="U5B-iU-gPK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="N3d-Ag-rsL"/>
+                            <constraint firstItem="U5B-iU-gPK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U4A-yA-PXM"/>
+                            <constraint firstItem="B7m-Ai-voi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="a3B-hj-kcL"/>
+                            <constraint firstItem="U5B-iU-gPK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dlX-Wy-XdO"/>
+                            <constraint firstItem="B7m-Ai-voi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lLt-2S-GiT"/>
+                            <constraint firstAttribute="bottom" secondItem="B7m-Ai-voi" secondAttribute="bottom" id="qx6-Rq-6h5"/>
+                            <constraint firstItem="B7m-Ai-voi" firstAttribute="top" secondItem="1Mf-05-UJU" secondAttribute="bottom" constant="150" id="zjV-0p-FJe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="btStatusLabel" destination="Fcc-wX-34W" id="8bR-bc-x3Q"/>
+                        <outlet property="titleLabel" destination="fDY-mi-X2x" id="neg-vI-tQo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="31.793478260869566"/>
         </scene>
     </scenes>
 </document>

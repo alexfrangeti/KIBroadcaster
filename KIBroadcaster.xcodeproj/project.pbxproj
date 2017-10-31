@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		876752471FA89723006180F7 /* KIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 876752461FA89723006180F7 /* KIButton.m */; };
 		87E290221FA7DC9400D6559A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E290211FA7DC9400D6559A /* AppDelegate.m */; };
 		87E290251FA7DC9400D6559A /* KIBeaconTransmitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E290241FA7DC9400D6559A /* KIBeaconTransmitterViewController.m */; };
 		87E290281FA7DC9400D6559A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87E290261FA7DC9400D6559A /* Main.storyboard */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		876752451FA89723006180F7 /* KIButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KIButton.h; sourceTree = "<group>"; };
+		876752461FA89723006180F7 /* KIButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KIButton.m; sourceTree = "<group>"; };
 		87E2901D1FA7DC9400D6559A /* KIBroadcaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KIBroadcaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E290201FA7DC9400D6559A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		87E290211FA7DC9400D6559A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		876752441FA8970C006180F7 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				876752451FA89723006180F7 /* KIButton.h */,
+				876752461FA89723006180F7 /* KIButton.m */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
 		87E290141FA7DC9400D6559A = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +123,7 @@
 		87E2901F1FA7DC9400D6559A /* KIBroadcaster */ = {
 			isa = PBXGroup;
 			children = (
+				876752441FA8970C006180F7 /* Custom Views */,
 				87E290521FA7DCF000D6559A /* Managers */,
 				87E290201FA7DC9400D6559A /* AppDelegate.h */,
 				87E290211FA7DC9400D6559A /* AppDelegate.m */,
@@ -294,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				876752471FA89723006180F7 /* KIButton.m in Sources */,
 				87E290251FA7DC9400D6559A /* KIBeaconTransmitterViewController.m in Sources */,
 				87E290551FA7DD0800D6559A /* KIBeaconTransmitter.m in Sources */,
 				87E290301FA7DC9400D6559A /* main.m in Sources */,

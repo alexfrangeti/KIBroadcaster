@@ -15,33 +15,33 @@
 
 @synthesize broadcastDelegate;
 
--(instancetype)initWithDelegate:(id<KIBeaconTransmitterDelegate>)delegate {
+- (instancetype)initWithDelegate:(id<KIBeaconTransmitterDelegate>)delegate {
     self = [super init];
     if (self) {
-        //we won't need a be execution queue, so the queue here is main (nil)
+        // We won't need a be execution queue, so the queue here is main (nil)
         manager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil];
     }
     return self;
 }
 
--(void)startAdvertisingWithRegion:(CLBeaconRegion *)beaconRegion andPower:(NSNumber *)transmitPower {
+- (void)startAdvertisingWithRegion:(CLBeaconRegion *)beaconRegion andPower:(NSNumber *)transmitPower {
     if (!beaconRegion || !transmitPower) {
         return;
     }
     
-    //get the device advertising characteristics for the passed in RSSI and beacon region
+    // Get the device advertising characteristics for the passed in RSSI and beacon region
     NSDictionary *transmitData = [beaconRegion peripheralDataWithMeasuredPower:transmitPower];
     
     [manager startAdvertising:transmitData];
 }
 
--(void)stopAdvertising {
+- (void)stopAdvertising {
     [manager stopAdvertising];
 }
 
 #pragma mark CBPeripheralDelegate protocol methods
 
--(void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral {
+- (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral {
     
 }
 

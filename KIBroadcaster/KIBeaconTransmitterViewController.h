@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 
-@interface KIBeaconTransmitterViewController : UIViewController
+@interface KIBeaconTransmitterViewController : UIViewController <CBCentralManagerDelegate>
 
+@property (weak) IBOutlet UILabel *titleLabel;
+@property (weak) IBOutlet UILabel *btStatusLabel;
 
 @end
 
