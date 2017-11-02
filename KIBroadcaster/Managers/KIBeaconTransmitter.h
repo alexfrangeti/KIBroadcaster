@@ -16,23 +16,44 @@
 @protocol KIBeaconTransmitterDelegate <NSObject>
 @required
 
-// Called on state change, power on
-- (void)didPowerOn;
+// Called on beacon state change, power on
+- (void)beaconDidPowerOn;
 
-// Called on state change, power off
-- (void)didPowerOff;
+// Called on beacon state change, power off
+- (void)beaconDidPowerOff;
+
+// Called on bluetooth state change, on
+- (void)bluetoothDidPowerOn;
+
+// Called on bluetooth state change, off
+- (void)bluetoothDidPowerOff;
+
+// Called on advertising start
+- (void)advertisingDidStart;
+
+// Called on advertising stop
+- (void)advertisingDidStop;
 
 // Called on any error that the manager signals
 - (void)onError:(NSError *)error;
 
 @end
 
-@interface KIBeaconTransmitter : NSObject<CBPeripheralManagerDelegate>
+@interface KIBeaconTransmitter : NSObject<CBPeripheralManagerDelegate, CBCentralManagerDelegate>
 
 // The manager's delegate object
 @property (weak) id<KIBeaconTransmitterDelegate>broadcastDelegate;
 
-// The sole constructor
+// BOOL ivar for the bluetooth service state
+@property (nonatomic) BOOL bluetoothServiceState;
+
+// The constructor
 - (instancetype)initWithDelegate:(id<KIBeaconTransmitterDelegate>)delegate;
+
+- (void)startAdvertising;
+- (void)stopAdvertising;
+
+// Info relay method for the beacon's data ( UUID, major, minor )
+- (NSString *)getBeaconInfo;
 
 @end

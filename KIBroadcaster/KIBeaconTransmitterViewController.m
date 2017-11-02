@@ -10,19 +10,26 @@
 
 @interface KIBeaconTransmitterViewController() {
     // CoreBluetooth discovery manager
-    CBCentralManager *btManager;
+    
+    KIBeaconTransmitter *transmitter;
+    BOOL beaconIsBroadcasting;
+    BOOL beaconPowerIsOn;
 }
 
 @end
 
 @implementation KIBeaconTransmitterViewController
 
-@synthesize titleLabel, btStatusLabel;
+@synthesize titleLabel, btStatusLabel, beaconDataLabel;
+@synthesize btBroadcastButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Setup the CoreBluetooth discovery manager, operations on main queue (nil)
-    btManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+    // Setup the beacon transmitter
+    transmitter = [[KIBeaconTransmitter alloc] initWithDelegate:self];
+    
+    //Setup the dataLabel with the beacon info.
+    [beaconDataLabel setText:[transmitter getBeaconInfo]];
 }
 
 - (void)showAlertForBTSettings {
@@ -50,50 +57,59 @@
     [btStatusLabel setText:stateString];
 }
 
+- (IBAction)toggleBroadcasting:(id)sender {
+    if (!beaconIsBroadcasting) {
+        
+        // Start broadcasting, if BT is on
+        if (transmitter.bluetoothServiceState) {
+            [transmitter startAdvertising];
+            beaconIsBroadcasting = YES;
+            [btBroadcastButton setTitle:@"Stop Broadcasting" forState:UIControlStateNormal];
+        } else {
+            [self showAlertForBTSettings];
+        }
+    } else {
+        [transmitter stopAdvertising];
+        beaconIsBroadcasting = NO;
+        [btBroadcastButton setTitle:@"Start Broadcasting" forState:UIControlStateNormal];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark CBCentralManager utilities
+#pragma mark KIBeaconTransmitterDelegate methods
 
-// Instance method that verifies the Bluetooth service state
-- (int)isBluetoothPoweredOn {
-    int state;
-    switch (btManager.state) {
-        case CBManagerStatePoweredOn:
-            state = YES;
-            break;
-        case CBManagerStatePoweredOff:
-            state = NO;
-            break;
-        default:
-            state = NO;
-            break;
-    }
-    return state;
+- (void)beaconDidPowerOn {
+    beaconPowerIsOn = YES;
 }
 
-#pragma mark CBCentralManagerDelegate methods
+- (void)beaconDidPowerOff {
+    beaconPowerIsOn = NO;
+}
 
-- (void)centralManagerDidUpdateState:(CBCentralManager *)central {
-    NSString *btStatusString = @"OFF";
-    switch ([self isBluetoothPoweredOn]) {
-        case YES:
-            NSLog(@"bluetooth is on");
-            btStatusString = @"ON";
-            break;
-        case NO:
-            NSLog(@"bluetooth is off");
-            
-            // If Bluetooth is not turned on, alert the user
-            [self showAlertForBTSettings];
-            break;
-        default:
-            break;
-    }
-    
-    // Update the BT status label
-    [self updateBtStatusLabelWithState:btStatusString];
+- (void)bluetoothDidPowerOn {
+    [self updateBtStatusLabelWithState:@"ON"];
+}
+
+- (void)bluetoothDidPowerOff {
+    [self updateBtStatusLabelWithState:@"OFF"];
+}
+
+- (void)advertisingDidStart {
+    NSString *beaconInfo = [transmitter getBeaconInfo];
+    NSLog(@"got beaconInfo: %@", beaconInfo);
+    [beaconDataLabel setText:beaconInfo];
+}
+
+- (void)advertisingDidStop {
+    NSString *beaconInfo = [transmitter getBeaconInfo];
+    [beaconDataLabel setText:beaconInfo];
+}
+
+- (void)onError:(NSError *)error {
+    //No specific implementation for the current scope
 }
 
 @end

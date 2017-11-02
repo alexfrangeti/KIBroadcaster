@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+// So we can set the view's params from IB
 IB_DESIGNABLE
 
 @interface KIButton : UIButton
 
+// Customizable properties via IB
 @property (nonatomic) IBInspectable CGFloat cornerRadius;
 @property (nonatomic) IBInspectable CGFloat borderWidth;
 @property (nonatomic) IBInspectable UIColor *borderColor;
